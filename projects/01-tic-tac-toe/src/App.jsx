@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import confetti from "canvas-confetti"
 
 import { Square } from "./components/Square"
@@ -50,6 +50,10 @@ function App() {
       window.localStorage.removeItem('turn')
     }
   }
+
+  useEffect(() => {
+    console.log('useEffect')
+  }, [])
 
   return (
     <main className="board">
