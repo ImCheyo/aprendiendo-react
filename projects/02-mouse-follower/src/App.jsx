@@ -16,6 +16,7 @@ const FollowMouse = () => {
     }
 
     return () => {
+      console.log('cleanup')
       window.removeEventListener('pointermove', handleMove)
     }
   }, [enabled])
